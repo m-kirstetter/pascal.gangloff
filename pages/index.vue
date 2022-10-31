@@ -37,7 +37,7 @@
         />
       </div>
     </div>
-    <Footer />
+    <AppFooter />
   </div>
 </template>
 
@@ -45,10 +45,10 @@
 import { defineComponent } from '@nuxtjs/composition-api'
 import NavBar from '~/components/NavBar.vue'
 import ImageCard from '~/components/ImageCard.vue'
-import Footer from '~/components/Footer.vue'
+import AppFooter from '~/components/AppFooter.vue'
 
 export default defineComponent({
   name: 'IndexPage',
-  components: { NavBar, ImageCard, Footer },
+  components: { NavBar, ImageCard, AppFooter },
 })
 </script>
