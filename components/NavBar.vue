@@ -1,21 +1,22 @@
 <template>
   <header>
-    <nav class="bg-white border-gray-200 px-4 lg:px-6 py-2.5 dark:bg-gray-800">
+    <nav class="bg-white border-gray-200 px-4 lg:px-6 py-2.5">
       <div
-        class="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl"
+        class="flex flex-wrap justify-between items-start mx-auto max-w-screen-xl"
       >
         <a href="https://flowbite.com" class="flex items-center">
           <span
-            class="self-center text-xl font-semibold whitespace-nowrap dark:text-white"
+            class="self-center text-xl font-semibold whitespace-nowrap flex flex-col sm:flex-row gap-1 sm:gap-3"
           >
-            Pascal Gangloff
+            <span>Pascal Gangloff</span>
+            <span class="text-gray-400 text-lg">Sculpteur</span>
           </span>
         </a>
         <div class="flex items-center lg:order-2">
           <button
             type="button"
             data-dropdown-toggle="language-dropdown"
-            class="inline-flex items-center text-gray-800 dark:text-gray-300 hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-2.5 lg:px-5 py-2.5 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800"
+            class="inline-flex items-center text-gray-800 hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-2.5 lg:px-5 py-2.5 dark:hover:bg-gray-700 focus:outline-none dark:focus:ring-gray-800"
           >
             <svg
               class="mr-2 w-5 h-5 rounded-full"
