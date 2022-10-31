@@ -6,7 +6,10 @@
         :src="image"
         :alt="alt"
       />
-      <span v-if="text" class="absolute text-5xl text-white bottom-5 right-5">
+      <span
+        v-if="text.length"
+        class="absolute text-5xl text-white bottom-5 right-5"
+      >
         {{ text }}
       </span>
     </a>
@@ -30,7 +33,7 @@ export default defineComponent({
     },
     text: {
       type: String as PropType<string>,
-      default: undefined,
+      default: '',
     },
   },
   setup() {

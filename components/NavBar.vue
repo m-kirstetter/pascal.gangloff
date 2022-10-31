@@ -4,7 +4,7 @@
       <div
         class="flex flex-wrap justify-between items-start mx-auto max-w-screen-xl"
       >
-        <a href="https://flowbite.com" class="flex items-center">
+        <a href="/pascal.gangloff/" class="flex items-center">
           <span
             class="self-center text-xl font-semibold whitespace-nowrap flex flex-col sm:flex-row gap-1 sm:gap-3"
           >

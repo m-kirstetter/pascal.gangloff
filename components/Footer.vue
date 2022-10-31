@@ -6,7 +6,7 @@
       class="mb-4 text-sm text-center text-gray-500 dark:text-gray-400 sm:mb-0"
     >
       &copy; 2022
-      <a href="https://flowbite.com/" class="hover:underline" target="_blank">
+      <a href="/pascal.gangloff/" class="hover:underline" target="_blank">
         Pascal Gangloff
       </a>
       - All rights reserved.
