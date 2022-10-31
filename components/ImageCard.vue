@@ -1,6 +1,6 @@
 <template>
-  <div class="bg-white rounded-lg border border-gray-200 shadow-md">
-    <a href="#" class="relative">
+  <div class="bg-white rounded-lg border border-gray-200 shadow-md w-full">
+    <a href="#" class="relative overflow-hidden w-full">
       <img
         class="rounded-lg object-cover h-[700px] w-full"
         :src="image"
