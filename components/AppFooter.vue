@@ -6,9 +6,7 @@
       class="mb-4 text-sm text-center text-gray-500 dark:text-gray-400 sm:mb-0"
     >
       &copy; 2022
-      <a href="/pascal.gangloff/" class="hover:underline" target="_blank">
-        Pascal Gangloff
-      </a>
+      <a href="/" class="hover:underline" target="_blank"> Pascal Gangloff </a>
       - All rights reserved.
     </p>
     <div class="flex justify-center items-center space-x-1">
