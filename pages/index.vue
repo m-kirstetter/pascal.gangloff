@@ -89,6 +89,23 @@
         alt="Baiser"
       />
     </div>
+    <div class="flex flex-col lg:flex-row gap-5">
+      <ImageCard :image="require(`~/assets/images/grace_01.jpg`)" alt="Grace" />
+      <ImageCard
+        :image="require(`~/assets/images/printemps_01.jpg`)"
+        alt="Printemps"
+      />
+    </div>
+    <div class="flex flex-col lg:flex-row gap-5">
+      <ImageCard
+        :image="require(`~/assets/images/renouveau_01.jpg`)"
+        alt="Renouveau"
+      />
+      <ImageCard
+        :image="require(`~/assets/images/katia_02.jpg`)"
+        alt="Katia 02"
+      />
+    </div>
   </div>
 </template>
 
