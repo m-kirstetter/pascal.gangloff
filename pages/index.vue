@@ -101,10 +101,6 @@
         :image="require(`~/assets/images/renouveau_01.jpg`)"
         alt="Renouveau"
       />
-      <ImageCard
-        :image="require(`~/assets/images/katia_02.jpg`)"
-        alt="Katia 02"
-      />
     </div>
   </div>
 </template>
