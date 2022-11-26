@@ -43,6 +43,7 @@ export default {
     '@nuxtjs/pwa',
     'nuxt-svg-loader',
     '@nuxtjs/i18n',
+    'nuxt-typeform',
   ],
 
   i18n: {
@@ -67,10 +68,16 @@ export default {
             contact: 'Contact',
           },
           about: {
-            paragraphOne: '',
-            paragraphTwo: '',
-            paragraphThree: '',
+            paragraphOne:
+              'I was born in 1963 in Mulhouse in Alsace, Where I started sculpting in 2000 on my own. Son and grandson of miners, I grew up carried by the gardens of the mining area.',
+            paragraphTwo:
+              'From the garden of Paradise, which then ceases to be lost.',
+            paragraphThree:
+              'Chance took me to Porto Santo in Madeira, I find there these roots that are essential to my well-being. I enjoy living there, practicing animal sculpture. In these places, it inspires me.',
             critics: 'Critics',
+          },
+          contact: {
+            submit: 'Send',
           },
           footer: {
             rights: 'All rights reserved.',
@@ -90,6 +97,9 @@ export default {
             paragraphThree:
               'Le hasard m’a emmené à Porto Santo à Madère, j’y retrouve ces racines indispensables a mon bien être. J’ai plaisir à y vivre et à y pratiquer la sculpture animalière, en ces lieux, cela m’y est inspiré.',
             critics: 'Critiques Presse',
+          },
+          contact: {
+            submit: 'Envoyer',
           },
           footer: {
             rights: 'Tous droits réservés.',

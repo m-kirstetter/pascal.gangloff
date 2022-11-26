@@ -1,15 +1,29 @@
 <template>
   <div class="flex flex-col gap-5">
-    <h1>Contact</h1>
+    <Typeform
+      url="https://redefyne.typeform.com/to/rIqSheE2"
+      hide-headers
+      hide-footer
+      :button-text="$i18n.t('contact.submit')"
+      :on-submit="homeRedirect"
+      :opacity="0"
+      class="h-[600px]"
+    />
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from '@nuxtjs/composition-api'
-import ImageCard from '~/components/ImageCard.vue'
+import { defineComponent, useContext, useRouter } from '@nuxtjs/composition-api'
 
 export default defineComponent({
   name: 'ContactPage',
-  components: { ImageCard },
+  setup() {
+    const { localePath } = useContext()
+    const router = useRouter()
+
+    return {
+      homeRedirect: () => router.push(localePath('')),
+    }
+  },
 })
 </script>
