@@ -42,7 +42,62 @@ export default {
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     'nuxt-svg-loader',
+    '@nuxtjs/i18n',
   ],
+
+  i18n: {
+    locales: [
+      {
+        code: 'en',
+        fullName: 'English',
+      },
+      {
+        code: 'fr',
+        fullName: 'Français',
+      },
+    ],
+    defaultLocale: 'en',
+    vueI18n: {
+      fallbackLocale: 'en',
+      messages: {
+        en: {
+          sculptor: 'Sculptor',
+          menu: {
+            about: 'About Me',
+            contact: 'Contact',
+          },
+          about: {
+            paragraphOne: '',
+            paragraphTwo: '',
+            paragraphThree: '',
+            critics: 'Critics',
+          },
+          footer: {
+            rights: 'All rights reserved.',
+          },
+        },
+        fr: {
+          sculptor: 'Sculpteur',
+          menu: {
+            about: 'À Propos',
+            contact: 'Contact',
+          },
+          about: {
+            paragraphOne:
+              'Je suis né en 1963 à Mulhouse en Alsace, où je débute la sculpture en 2000 de façon autodidacte. Fils et petit fils de mineurs, j’ai grandi porté par les jardins du bassin minier.',
+            paragraphTwo:
+              'Quand je sculpte, je me retrouve dans l’univers printanier de ce jadis, du jardin du Paradis, qui cesse alors d’être perdu.',
+            paragraphThree:
+              'Le hasard m’a emmené à Porto Santo à Madère, j’y retrouve ces racines indispensables a mon bien être. J’ai plaisir à y vivre et à y pratiquer la sculpture animalière, en ces lieux, cela m’y est inspiré.',
+            critics: 'Critiques Presse',
+          },
+          footer: {
+            rights: 'Tous droits réservés.',
+          },
+        },
+      },
+    },
+  },
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {

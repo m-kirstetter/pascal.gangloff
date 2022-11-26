@@ -7,7 +7,7 @@
     >
       &copy; 2022
       <a href="/" class="hover:underline" target="_blank"> Pascal Gangloff </a>
-      - All rights reserved.
+      - {{ $i18n.t('footer.rights') }}
     </p>
     <div class="flex justify-center items-center space-x-1">
       <a

@@ -4,12 +4,12 @@
       <div
         class="flex flex-wrap justify-between items-start mx-auto max-w-screen-xl"
       >
-        <nuxt-link to="/" class="flex items-center">
+        <nuxt-link :to="localePath('/')" class="flex items-center">
           <span
             class="self-center text-xl font-semibold whitespace-nowrap flex flex-col sm:flex-row gap-1 sm:gap-3"
           >
             <span>Pascal Gangloff</span>
-            <span class="text-gray-400 text-lg">Sculpteur</span>
+            <span class="text-gray-400 text-lg">{{ $i18n.t('sculptor') }}</span>
           </span>
         </nuxt-link>
         <div class="flex items-center lg:order-2">
@@ -18,7 +18,7 @@
             data-dropdown-toggle="language-dropdown"
             class="inline-flex items-center text-gray-800 hover:bg-gray-50 focus:ring-4 focus:ring-gray-300 font-medium rounded-lg text-sm px-2.5 lg:px-5 py-2.5 focus:outline-none"
           >
-            English
+            {{ $i18n.localeProperties.fullName }}
             <svg
               class="ml-1 w-4 h-4"
               fill="none"
@@ -39,24 +39,24 @@
             id="language-dropdown"
             class="hidden z-50 my-4 w-48 text-base list-none bg-white rounded divide-y divide-gray-100 shadow"
           >
-            <ul class="py-1" role="none">
+            <ul
+              v-for="lang in $i18n.availableLocales.filter(
+                (i) => i !== $i18n.locale
+              )"
+              :key="`lang-${lang}`"
+              class="py-1"
+              role="none"
+            >
               <li>
-                <a
-                  href="#"
+                <nuxt-link
+                  :to="switchLocalePath(lang)"
                   class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
                   role="menuitem"
                 >
-                  <div class="inline-flex items-center">Português</div>
-                </a>
-              </li>
-              <li>
-                <a
-                  href="#"
-                  class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-100"
-                  role="menuitem"
-                >
-                  <div class="inline-flex items-center">Français</div>
-                </a>
+                  <div class="inline-flex items-center">
+                    {{ getLocale(lang)?.fullName }}
+                  </div>
+                </nuxt-link>
               </li>
             </ul>
           </div>
@@ -103,18 +103,18 @@
           >
             <li>
               <nuxt-link
-                to="/about"
+                :to="localePath('about')"
                 class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-white lg:border-0 lg:hover:text-primary-700 lg:p-0"
               >
-                About Me
+                {{ $i18n.t('menu.about') }}
               </nuxt-link>
             </li>
             <li>
               <nuxt-link
-                to="/contact"
+                :to="localePath('contact')"
                 class="block py-2 pr-4 pl-3 text-gray-700 border-b border-gray-100 hover:bg-gray-50 lg:hover:bg-white lg:border-0 lg:hover:text-primary-700 lg:p-0"
               >
-                Contact
+                {{ $i18n.t('menu.contact') }}
               </nuxt-link>
             </li>
           </ul>
@@ -125,10 +125,20 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from '@nuxtjs/composition-api'
+import { defineComponent, useContext } from '@nuxtjs/composition-api'
+import { LocaleObject } from '@nuxtjs/i18n'
 
 export default defineComponent({
   name: 'NavBar',
   components: {},
+  setup() {
+    const { i18n } = useContext()
+    return {
+      getLocale: (locale: string) =>
+        (i18n.locales as LocaleObject[]).find(
+          (i: LocaleObject) => i.code === locale
+        ),
+    }
+  },
 })
 </script>
