@@ -5,14 +5,13 @@
         <ImageCard
           :image="require(`~/assets/images/girafe_01.jpg`)"
           alt="Girafe"
-          text="6.000 €"
         />
       </div>
       <a href="https://youtube.com/watch?v=tdMzICXoX2s" target="_blank">
         <ImageCard
           :image="require(`~/assets/images/bear_01.jpg`)"
           alt="Bear"
-          text="6.000 €"
+          text="4.000 €"
           video
         />
       </a>
@@ -22,7 +21,7 @@
         <ImageCard
           :image="require(`~/assets/images/flamingo_01.jpg`)"
           alt="Flamingo"
-          text="1.600 €"
+          text="1.000 €"
           height="300"
         />
       </div>
